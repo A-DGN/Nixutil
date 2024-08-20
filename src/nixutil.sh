@@ -1,12 +1,15 @@
 #!/run/current-system/sw/bin/bash
 
 # Remplacez ces variables avec vos informations
-NTFY_TOPIC="Jvddmmy6CeKegzYwCqtiRxTELHgQ*vpa_YjsvMQCuDb"   # Le nom du topic ntfy
-NTFY_SERVER="https://ntfy.sh"  # L'URL du serveur ntfy, par défaut c'est https://ntfy.sh
-MESSAGE="I'm alive"   # Le message que vous souhaitez envoyer
+NTFY_TOPIC="HLoGiwtvZo9sCHTLGd3PgRYo963R8"  # Utiliser un topic sans caractères spéciaux ou les encoder
+NTFY_SERVER="https://ntfy.sh"
+MESSAGE="Ceci est un message de test."
 
 # Optionnel: Ajouter un titre au message
 TITLE="MS-01 setup"
 
-# Envoyer le message via une requête POST avec curl
-curl -H "Title: $TITLE" -d "$MESSAGE" "$NTFY_SERVER/$NTFY_TOPIC"
+# Envoyer le message avec des informations de débogage
+curl -v \
+     -H "Title: $TITLE" \
+     -d "$MESSAGE" \
+     "$NTFY_SERVER/$NTFY_TOPIC"
