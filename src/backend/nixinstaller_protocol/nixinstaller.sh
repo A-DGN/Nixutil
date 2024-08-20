@@ -1,3 +1,2 @@
-#!/usr/bin/env bash
-cd /
-echo "1234" > test_output.txt
+#!/bin/bash
+echo "1234" > /tmp/test_output.txt
