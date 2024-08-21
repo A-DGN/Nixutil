@@ -1,8 +1,0 @@
-
-# Config file for every folder to save and restor
-
-DOCKER_FOLDER: '/apps/docker/'
-
-services:
-  minecraft-server:
-    path: ${DOCKER_FOLDER}/minecraft/data/world
